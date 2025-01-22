@@ -5,20 +5,17 @@ import org.junit.jupiter.params.provider.*;
 
 import java.util.stream.*;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
+class BubbleSortTest {
 
-class SelectionSortTest {
-    
-    
     @ParameterizedTest
     @MethodSource("testData")
-    void selectionSortTest(int[] input, int[] output) {
-        SelectionSort.sort(input);
+    void bubbleSortTest(int[] input, int[] output) {
+        BubbleSort.sort(input);
         assertArrayEquals(input, output);
     }
-    
+
     static Stream<Arguments> testData() {
         return Stream.of(
                 Arguments.of(
@@ -29,4 +26,5 @@ class SelectionSortTest {
                 )
         );
     }
+
 }
