@@ -12,7 +12,7 @@ class MergeTwoSortedArraysTest {
 
     @ParameterizedTest
     @MethodSource("testData")
-    void selectionSortTest(int[] a, int[] b, int[] output) {
+    void test(int[] a, int[] b, int[] output) {
         int[] result = MergeTwoSortedArrays.merge(a, b);
         assertArrayEquals(result, output);
     }
