@@ -25,6 +25,9 @@ class MergeSortedSubArraysTest {
                 ),
                 Arguments.of(
                         new int[]{1,7,9,10,20,30,11,21,50}, 0, 6, 7, new int[]{1,7,9,10,11,20,21,30,50}
+                ),
+                Arguments.of(
+                        new int[]{6,7,5}, 0, 2, 2, new int[]{5,6,7}
                 )
         );
     } 
