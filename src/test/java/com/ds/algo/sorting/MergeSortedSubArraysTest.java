@@ -22,8 +22,10 @@ class MergeSortedSubArraysTest {
         return Stream.of(
                 Arguments.of(
                         new int[]{1,7,5,10,20,30,11,21,50}, 3, 6, 7, new int[]{1,7,5,10,11,20,21,30,50} 
+                ),
+                Arguments.of(
+                        new int[]{1,7,9,10,20,30,11,21,50}, 0, 6, 7, new int[]{1,7,9,10,11,20,21,30,50}
                 )
         );
     } 
-
 }
