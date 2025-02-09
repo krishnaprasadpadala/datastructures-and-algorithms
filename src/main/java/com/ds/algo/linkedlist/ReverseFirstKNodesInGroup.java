@@ -1,11 +1,13 @@
 package com.ds.algo.linkedlist;
 
-public class ReverseFirstKNodesInLinkedList {
-    
-    public static Node reverseFirstKNodes(Node head, int k) {
+public class ReverseFirstKNodesInGroup {
+
+
+    public static Node reverseFirstKNodesInGroup(Node head, int k) {
         if(k == 1 || head == null || head.next == null) {
             return head;
         }
+        
         Node prev = null;
         Node curr = head;
         while(curr!= null && k>0) {
@@ -15,7 +17,7 @@ public class ReverseFirstKNodesInLinkedList {
             curr = temp;
             k--;
         }
-        head.next = curr;
+        head.next = reverseFirstKNodesInGroup(curr, k);
         return prev;
     }
 }

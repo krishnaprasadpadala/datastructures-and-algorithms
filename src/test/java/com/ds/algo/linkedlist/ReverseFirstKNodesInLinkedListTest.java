@@ -24,9 +24,6 @@ class ReverseFirstKNodesInLinkedListTest {
         assertSame(temp1, temp2);
     }
 
-
-
-
     static Stream<Arguments> testData() {
         return Stream.of(
                 Arguments.of(LinkedListGenerator.generateRandomLinkedList(List.of(10,20,30,40,50)), 2,
